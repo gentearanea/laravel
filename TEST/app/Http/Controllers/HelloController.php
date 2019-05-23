@@ -1,14 +1,14 @@
 <?php
 
 # 名前空間
-# 階層的にファイルを整理する仕組み
+# 階層的にファイルを整理する仕組み?
 namespace App\Http\Controllers;
 
 # use文
 # Illuminate\Httpパッケージ内に用意されている「Request」を使える状態にしている。
 use Illuminate\Http\Request;
 
-# Controllerというクラスを継承して作成
+# Controllerクラスを継承して作成
 # php artisan meke:controller HelloControllerで作成
 class HelloController extends Controller
 {

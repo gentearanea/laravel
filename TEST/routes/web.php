@@ -28,5 +28,8 @@ Route::get('hello1',function() {
 # app/Http/Contollers/HelloControllerクラスのindexメソッドを呼び出している
 Route::get('HELLO','HelloController@index');
 
-# HelloControllerを
+# RequestとResponce用
+# /RequestResponceにアクセス
+Route::get('RequestResponce','RequestResponseTestController@index');
+
 
