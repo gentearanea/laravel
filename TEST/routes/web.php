@@ -32,4 +32,11 @@ Route::get('HELLO','HelloController@index');
 # /RequestResponceにアクセス
 Route::get('RequestResponce','RequestResponseTestController@index');
 
+# hello.index → /hello/index.php
+// # viewが返すのは「Response」
+// Route::get('hello', function() {
+//     return view('hello.index');
+// });
 
+# Route::getでviewするか、Route::getで呼び出されたアクションメソッド内でviewするかの違い
+Route::get('hello/{id?}', 'HelloController@index');
