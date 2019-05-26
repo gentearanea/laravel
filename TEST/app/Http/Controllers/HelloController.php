@@ -12,12 +12,23 @@ use Illuminate\Http\Request;
 # php artisan meke:controller HelloControllerで作成
 class HelloController extends Controller
 {
-    # アクションメソッド?
-    public function index($id='test') {
+    # アクションメソッド
+    public function index() {
         $data = [
-            'msg' => 'これはコントローラーからのメッセージです。',
-            'id' => $id
+            'msg' => '名前を入力してください',
         ];
+        return view('hello.index', $data);
+    }
+
+    public function post(Request $request){
+        console.log($request);
+        $msg = $request->msg;
+
+        $data = [
+            'msg'=>'こんにちは、' . $msg . 'さん！',
+        ];
+
+        # view/hello/indexを返してるだけ
         return view('hello.index', $data);
     }
 }

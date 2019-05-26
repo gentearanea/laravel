@@ -40,3 +40,6 @@ Route::get('RequestResponce','RequestResponseTestController@index');
 
 # Route::getでviewするか、Route::getで呼び出されたアクションメソッド内でviewするかの違い
 Route::get('hello/{id?}', 'HelloController@index');
+
+# POST時のRoute setting
+Route::get('hello','HelloController@post');
