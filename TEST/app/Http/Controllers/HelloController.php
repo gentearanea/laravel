@@ -15,9 +15,10 @@ class HelloController extends Controller
     # アクションメソッド
     public function index() {
         $data = [
-            'msg' => '名前を入力してください',
-        ];
-        return view('hello.index', $data);
+            ['name'=>'山田太郎','mail' => 'tarou@xxx.com'],
+            ['name'=>'ジョンドール', 'mail' => 'john@xxx.com'],
+            ['name'=>'ティムクック', 'mail' => 'tim@xxx.com'],        ];
+        return view('hello.index', ['data' => $data]);
     }
 
     public function post(Request $request){
