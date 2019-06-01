@@ -14,11 +14,13 @@ class HelloController extends Controller
 {
     # アクションメソッド
     public function index() {
-        $data = [
-            ['name'=>'山田太郎','mail' => 'tarou@xxx.com'],
-            ['name'=>'ジョンドール', 'mail' => 'john@xxx.com'],
-            ['name'=>'ティムクック', 'mail' => 'tim@xxx.com'],        ];
-        return view('hello.index', ['data' => $data]);
+        //$data = [
+        //     ['name'=>'山田太郎','mail' => 'tarou@xxx.com'],
+        //     ['name'=>'ジョンドール', 'mail' => 'john@xxx.com'],
+        //     ['name'=>'ティムクック', 'mail' => 'tim@xxx.com'],        
+        // ];
+        // return view('hello.index', ['data' => $data]);
+        return view('hello.index',['message' => 'Hello!']);
     }
 
     public function post(Request $request){
