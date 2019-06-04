@@ -27,7 +27,7 @@
     @include('components.message', ['msg_title'=>'OK',
     'msg_content'=>'サブビューです'])
 
-    <!-- サブビューではhtmlタグが正しく渡せないので注意-->
+    <!-- サブビューではhtmlタグが正しく渡せないので注意。-->
 
 @endsection
 
